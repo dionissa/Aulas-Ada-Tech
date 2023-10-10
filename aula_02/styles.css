@@ -1,0 +1,136 @@
+.mainTitle {
+  background-color: #ec1d24;
+  color: white;
+  text-align: center;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  font-size: 50px;
+  margin-bottom: 25px;
+  margin-top: 25px;
+}
+
+.listaOl {
+  padding: 30px;
+  margin: 10px;
+  background-color: rgb(146, 6, 6);
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  border-radius: 10px;
+}
+
+img {
+  height: 400px;
+}
+
+li {
+  font-family: sans-serif;
+  font-size: 30px;
+  margin-left: 20px;
+  list-style: none;
+}
+
+#poster1 {
+  background-color: purple;
+  border-radius: 10px;
+  padding: 20px;
+  color: white;
+  filter: blur(8px) grayscale(100);
+  transition: all 1s ease;
+}
+
+#poster2 {
+  background-color: rgb(36, 36, 145);
+  padding: 20px;
+  border-radius: 10px;
+  color: white;
+  transition: all 1s ease;
+  filter: blur(8px) grayscale(100);
+}
+
+#poster3 {
+  background-color: #7a0505;
+  padding: 20px;
+  color: white;
+  transition: all 1s ease;
+  filter: blur(8px) grayscale(100);
+  border-radius: 10px;
+}
+
+#poster4 {
+  background-color: rgb(53, 50, 184);
+  padding: 20px;
+  color: white;
+  transition: all 1s ease;
+  filter: blur(8px) grayscale(100);
+  border-radius: 10px;
+}
+
+#poster5 {
+  background-color: rgb(245, 89, 42);
+  padding: 20px;
+  filter: blur(8px) grayscale(100);
+  transition: all 1s ease;
+  color: white;
+  border-radius: 10px;
+}
+
+#poster1:hover {
+  filter: none;
+  transition: all 1s ease;
+}
+
+#poster2:hover {
+  filter: none;
+  transition: all 1s ease;
+}
+
+#poster3:hover {
+  filter: none;
+  transition: all 1s ease;
+}
+
+#poster4:hover {
+  filter: none;
+  transition: all 1s ease;
+}
+
+#poster5:hover {
+  filter: none;
+  transition: all 1s ease;
+}
+
+table {
+  border: 3px solid #ffffff;
+  border-collapse: collapse;
+  padding: 5px;
+}
+table th {
+  border: 1px solid #b3adad;
+  padding: 5px;
+  background: #fe2a2a;
+  color: #ffffff;
+}
+table td {
+  border: 1px solid #b3adad;
+  text-align: center;
+  padding: 5px;
+  background: #ffffff;
+  color: #313030;
+  font-size: x-large;
+  font-family: sans-serif;
+}
+
+.tableAval {
+  width: 400px;
+  border-radius: 15px;
+  margin: auto;
+  background-color: #7a0505;
+  padding: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+body {
+  background-color: #ec1d24;
+}
