@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ajude essa causa</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="left-container">
+        <h1>Ajude nossa causa!<br>Inscreva-se para a Corrida Beneficente!</h1>
+        <img src="jogging-animate.svg" alt="imagem correndo" class="img-left">
+      </div>
+      <div class="right-container">
+        <div class="card-container">
+            <form           onsubmit="confirmarInscricao()"
+            action="http://localhost:3000/forms"
+            method="post"
+            name="forms"
+            target="_blank">
+          <h1>Faça sua inscrição abaixo</h1>
+          <div class="text-field">
+            <label for="nomeCompleto">Nome Completo</label>
+            <input
+              type="text"
+              name="nomeCompleto"
+              placeholder="João da Silva"
+            />
+          </div>
+          <div class="text-field">
+            <label for="idade">Idade</label>
+            <input type="number" name="idade" placeholder="18+" />
+          </div>
+       
+        <div class="text-field">
+          <label for="email">Qual seu e-mail?</label>
+          <input type="email" name="email" placeholder="teste@teste.com.br" />
+        </div>
+        <div class="text-field">
+          <label for="shirtSize">Qual tamanho de sua camiseta? <select name="tamanhoCamiseta">
+            <option value="pequena">P</option>
+            <option value="media">M</option>
+            <option value="grande">G</option>
+            <option value="extra-grande">XG</option>
+            <option value="extra-grande-grande">XGG</option>
+          </select></label>
+        </div>  
+      <div class="text-field">
+        <label for="category"
+          >Categoria de Inscrição:
+          <select name="categoria">
+            <option value="3run">Corrida 3km</option>
+            <option value="5run">Corrida 5km</option>
+            <option value="4walk">Caminhada 4km</option>
+          </select>
+        </label>
+      </div>
+      <div class="text-field">
+        <label for="doacao">Doação voluntária:</label>
+     
+      <input type="number" name="doacao" placeholder="R$5,00" /> </div>
+      <div><button class="btn-submit" type="submit">Confirmar Inscrição!</button></div>
+    </div>
+</div>
+
+</div>
+</form>
+  </body>
+</html>
