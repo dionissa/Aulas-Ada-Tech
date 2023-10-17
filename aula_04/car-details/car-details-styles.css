@@ -1,0 +1,187 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Noto+Sans:wght@400;700&family=Roboto+Slab:wght@900&family=Roboto:wght@300&display=swap");
+
+* {
+  margin: 0;
+  font-family: "Libre Baskerville", serif;
+  font-family: "Noto Sans", sans-serif;
+  font-family: "Roboto", sans-serif;
+  font-family: "Roboto Slab", serif;
+}
+
+body,
+html {
+  background-color: #f6f6f6;
+}
+/* Estilização da Navbar: */
+nav ul li {
+  display: inline;
+}
+
+nav ul li a {
+  text-align: center;
+}
+
+nav {
+  background-color: #f6f6f6;
+  text-align: center;
+  padding: 0 0;
+  padding: 2px;
+  margin-bottom: 20px;
+}
+
+nav a {
+  color: #363538;
+  text-decoration: none;
+  padding: 3px 5px;
+  display: inline-block;
+}
+
+nav a:hover {
+  background-color: rgb(160, 0, 0);
+  padding: 3px 5px;
+  color: #fff;
+  border-radius: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(160, 0, 0);
+  text-align: center;
+}
+
+/* Estilização do Card: */
+
+figure {
+  margin: auto;
+  padding: 30px;
+  background-color: white;
+  width: 850px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  transition: transform 0.2s;
+}
+
+figure:hover {
+  transform: scale(1.1);
+}
+figure img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+figcaption {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+ul {
+  list-style-type: none;
+  text-align: center;
+  padding: 0;
+  margin-top: 15px;
+}
+
+ul li {
+  margin-bottom: 10px;
+}
+
+.preco {
+  font-weight: bold;
+  font-size: 20px;
+  margin: 10px 0;
+  text-align: center;
+  color: rgb(145, 0, 0);
+}
+
+/* Estilização do Footer: */
+
+footer {
+  margin-top: 30px;
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+  font-size: 14px;
+  border-top: 1px solid #444;
+}
+
+footer .footer-content {
+  width: 80%;
+  margin: 0 auto;
+}
+
+footer p {
+  margin: 0;
+}
+
+footer strong {
+  color: rgb(9, 170, 9);
+}
+
+/* Responsividade para tablet */
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  main,
+  aside {
+    float: none;
+    width: 100%;
+  }
+
+  article {
+    display: block;
+    max-width: 100%;
+    margin: 1%;
+    text-align: center;
+    float: none;
+  }
+
+  article img {
+    width: 85%;
+  }
+  .about-content > img {
+    display: none;
+  }
+  .contact-image,
+  .contact-content {
+    float: none;
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .contact-image img {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+  .insurance-section img {
+    max-width: 600px;
+    display: inline-block;
+    padding: 10px;
+    max-height: fit-content;
+  }
+}
+
+/* Responsividade para celular */
+
+@media only screen and (max-width: 767px) {
+  nav ul {
+    text-align: center;
+    padding: 0;
+  }
+
+  nav ul li {
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  figure img {
+    width: 85vw;
+    border-radius: 15px;
+    padding: 15px;
+  }
+
+  figure {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+}

@@ -1,0 +1,555 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Noto+Sans:wght@400;700&family=Roboto+Slab:wght@900&family=Roboto:wght@300&display=swap");
+
+* {
+  margin: 0;
+  font-family: "Libre Baskerville", serif;
+  font-family: "Noto Sans", sans-serif;
+  font-family: "Roboto", sans-serif;
+  font-family: "Roboto Slab", serif;
+}
+
+body {
+  background-color: #f6f6f6;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Estilização da Navbar: */
+nav ul li {
+  display: inline;
+}
+
+nav ul li a {
+  text-align: center;
+}
+
+nav {
+  background-color: #f6f6f6;
+  text-align: center;
+  padding: 0 0;
+  padding: 2px;
+}
+
+nav a {
+  color: #363538;
+  text-decoration: none;
+  padding: 3px 5px;
+  display: inline-block;
+}
+
+nav a:hover {
+  background-color: rgb(160, 0, 0);
+  padding: 3px 5px;
+  color: #fff;
+  border-radius: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(160, 0, 0);
+}
+
+/* Estilização do Header: */
+
+header {
+  padding: 30px;
+  text-align: center;
+  color: #fff;
+  display: block;
+  background: url(img/header.jpg);
+  background-position: center;
+  position: relative;
+  background-size: 100vw;
+  background-repeat: no-repeat;
+  height: 60px;
+  background-color: #000;
+  line-height: 60px;
+}
+
+header > h1,
+header > img {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: normal;
+  margin: 0 20px;
+}
+
+header h1 {
+  font-weight: bold;
+  text-shadow: 2px 3px 5px rgba(0, 0, 0, 0.7);
+}
+
+/* Estilização do Section: */
+
+section > img {
+  margin: 0;
+  width: 100%;
+  max-height: 250px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Estilização do Main: */
+
+article {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 15px;
+  max-width: 300px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: inline-block;
+  margin: 5px;
+  background-color: #fff;
+  transition: transform 0.2s;
+}
+
+#offer {
+  border: 2px solid #860c0c;
+}
+
+/* Efeito de zoom no Card que o mouse está em cima */
+
+article:hover {
+  transform: scale(1.15);
+  z-index: 10000;
+  position: relative;
+}
+
+article img {
+  min-width: 300px;
+  max-height: 180px;
+  object-fit: cover;
+}
+
+figure {
+  position: relative;
+}
+
+figcaption {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 5px;
+  border-radius: 3px;
+}
+
+.preco {
+  font-weight: bold;
+  font-size: 20px;
+  margin: 10px 0;
+}
+
+/* Destaque em vermelho pro carro na promoção */
+
+.deal {
+  background-color: #860c0c;
+  border-radius: 5px;
+  padding: 3px;
+  text-align: center;
+  color: white;
+}
+
+.deal_baloon {
+  position: absolute;
+  margin-top: -320px;
+  background-color: #860c0c;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+/* Lista não ordenada das características dos carros */
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul li {
+  margin-bottom: 5px;
+  font-size: 14px;
+  color: #555;
+}
+
+/* Float pra fazer o main ficar a esquerda */
+
+main {
+  float: left;
+  width: 75%;
+  box-sizing: border-box;
+  padding: 20px;
+  scroll-behavior: smooth;
+}
+
+main > h2,
+aside h2 {
+  font-size: 2em;
+  margin-bottom: 6px;
+}
+
+h3 {
+  text-align: center;
+}
+
+/* Float pro aside ficar na direita */
+
+aside {
+  float: right;
+  width: 25%;
+  box-sizing: border-box;
+  background-color: #f5f5f5;
+  padding: 20px;
+}
+
+aside .post-card {
+  display: block;
+  width: 100%;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+}
+
+.cards-box {
+  position: relative;
+  border: none;
+  box-shadow: none;
+  border: 1px solid #e0e0e0;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+.post-image {
+  float: left;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 80px;
+  height: 60px;
+  left: 10px;
+}
+
+.post-content {
+  display: table-cell;
+  vertical-align: middle;
+  line-height: 60px;
+}
+
+.post-title {
+  margin: 0;
+  text-align: center;
+  font-size: 16px;
+  padding: 5px;
+  font-weight: bold;
+}
+
+.post-description {
+  font-size: 14px;
+  color: #555;
+  text-align: justify;
+  padding: 5px;
+  margin-left: 100px;
+}
+
+.post-title,
+.post-description {
+  line-height: normal;
+}
+
+/* Estilização do Section de Sobre nós */
+
+.about-us {
+  background-color: #f6f6f6;
+  padding: 50px 0;
+}
+
+.about-us h2 {
+  text-align: center;
+  font-size: 3em;
+  margin-bottom: 40px;
+  clear: both;
+  padding: 50px 30;
+}
+
+.about-content {
+  display: table;
+  padding: 30px;
+}
+
+.founders-image {
+  display: table-cell;
+  height: 350px;
+  margin-right: 30px;
+  vertical-align: top;
+}
+
+.about-text {
+  display: table-cell;
+  vertical-align: top;
+  text-align: justify;
+}
+
+.about-text p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+/* Estilização da section de Contato: */
+
+.contact-section {
+  background-color: rgb(160, 0, 0);
+  padding: 40px 0;
+  text-align: center;
+  color: white;
+  overflow: hidden;
+}
+
+.contact-section h2 {
+  margin-bottom: 20px;
+}
+
+.contact-image {
+  float: left;
+  width: 60%;
+  width: 450px;
+  height: auto;
+  margin-left: 50px;
+}
+
+.contact-content {
+  float: right;
+  width: 40%;
+}
+
+.contact-section label,
+.contact-section input,
+.contact-section textarea {
+  display: block;
+  width: 80%;
+  margin: 10px auto;
+  padding: 5px;
+}
+
+.contact-section input[type="submit"] {
+  background-color: #ff5858;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.contact-section input[type="submit"]:hover {
+  background-color: #490a0a;
+}
+
+/* Estilização do Section da tabela de Seguros */
+
+.insurance-section {
+  background-color: #ffffff;
+  padding: 40px 0;
+  text-align: center;
+}
+
+.insurance-section img {
+  max-width: 300px;
+  display: inline-block;
+  padding: 10px;
+  margin: 30px;
+}
+
+.insurance-section h2 {
+  font-size: 3em;
+}
+
+.insurance-table {
+  width: 90%;
+  margin: 0 auto;
+  border-collapse: collapse;
+  background-color: #dadada;
+}
+
+.insurance-table th,
+.insurance-table td {
+  padding: 15px;
+  border: 1px solid #d0d0d0;
+  text-align: center;
+}
+
+.insurance-table th {
+  background-color: #333;
+  color: #fff;
+}
+
+.tick {
+  color: green;
+}
+
+.cross {
+  color: red;
+}
+
+/* Estilização do botão de voltar ao Topo */
+
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 20px;
+  opacity: 0.7;
+  transition: opacity 0.3s;
+  scroll-behavior: smooth;
+}
+
+.back-to-top:hover {
+  opacity: 1;
+}
+
+/* Estilização do Footer: */
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+  font-size: 14px;
+  border-top: 1px solid #444;
+}
+
+footer .footer-content {
+  width: 80%;
+  margin: 0 auto;
+}
+
+footer p {
+  margin: 0;
+}
+
+footer strong {
+  color: rgb(9, 170, 9);
+}
+
+/* Responsividade para tablet */
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  main,
+  aside {
+    float: none;
+    width: 100%;
+  }
+
+  article {
+    display: block;
+    max-width: 100%;
+    margin: 1%;
+    text-align: center;
+    float: none;
+  }
+
+  article img {
+    width: 85%;
+  }
+  .about-content > img {
+    display: none;
+  }
+  .contact-image,
+  .contact-content {
+    float: none;
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .contact-image img {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+  .insurance-section img {
+    max-width: 600px;
+    display: inline-block;
+    padding: 10px;
+    max-height: fit-content;
+  }
+}
+
+/* Responsividade para celular */
+
+@media only screen and (max-width: 767px) {
+  nav ul {
+    text-align: center;
+    padding: 0;
+  }
+
+  nav ul li {
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  .contact-section {
+    text-align: center;
+  }
+
+  .contact-image,
+  .contact-content {
+    float: none;
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .contact-image img {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  header > h1,
+  header > img {
+    font-size: 23px;
+    display: inline;
+    margin: 0 0px;
+    max-width: 70px;
+  }
+
+  main,
+  aside {
+    float: none;
+    width: 100%;
+  }
+
+  article {
+    display: block;
+    max-width: 100%;
+    margin: 5px 0;
+    float: none;
+  }
+
+  .about-content > img {
+    display: none;
+  }
+
+  .contact-section label,
+  .contact-section input,
+  .contact-section textarea {
+    width: 90%;
+  }
+
+  .insurance-table {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .insurance-table th,
+  .insurance-table td {
+    font-size: 12px;
+    padding: 4px 8px;
+  }
+}
