@@ -1,18 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;900&display=swap');
 
 /* Estilos padrão para a página toda */
-.material-symbols-outlined {
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 24
-}
+
+p::selection {
+    background-color: rgb(40, 42, 54);
+    color: #ea1d2c;
+  }
 
 body {
     line-height: 1.5;
     font-family: 'Lato', sans-serif;
-    background-color: #fcfcfa
+    transition: background-color 0.5s;
+    background-color: #fff; 
 }
 
 html {
@@ -23,6 +22,117 @@ html {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+
+.header {
+    transition: background-color 0.5s;
+    background-color: #eee; 
+}
+
+/* Estilos do modo noturno */
+
+#darkMode:checked ~ .dark-body-bg {
+    background-color: rgb(40, 42, 54);
+    color: white;
+}
+
+#darkMode:checked ~ .dark-body-bg nav.header{
+    background-color: rgb(68, 71, 90);
+}
+
+#darkMode:checked ~ .dark-body-bg nav.header ul li a{
+    color: white;
+}
+
+#darkMode:checked ~ .dark-body-bg div.texto{
+    background-color: rgb(40, 42, 54);
+}
+
+#darkMode:checked ~ .dark-body-bg div.card{
+    background-color: rgb(68, 71, 90);
+}
+
+#darkMode:checked ~ .dark-body-bg table{
+    color: #666666;
+}
+
+#darkMode:checked ~ .dark-body-bg div.contact-box{
+    background-color: rgb(40, 42, 54);
+}
+
+#darkMode:checked ~ .dark-body-bg p::selection{
+    background-color: rgb(255, 255, 255);
+}
+
+#darkMode:checked ~ .dark-body-bg h1::selection{
+    background-color: rgb(255, 255, 255);
+}
+
+
+ 
+/* Estilos para a alternância de modo noturno*/
+.dark-mode-toggle {
+    display: none;
+}
+
+.dark-mode-label {
+    position: fixed;
+    bottom: 2%;
+    left: 2%;
+    z-index: 5;
+    font-size: 2rem;
+    cursor: pointer;
+    bottom: 10%;
+}
+
+#darkMode:checked ~ .header {
+    background-color: rgb(68, 71, 90); 
+}
+
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+.dark-mode-toggle {
+    display: none; 
+}
+
+.dark-mode-label {
+    position: fixed;
+    bottom: 2%;
+    left: 2%;
+    z-index: 9999;
+    width: 50px;
+    height: 25px;
+    background-color: #ccc;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.5s;
+}
+
+.dark-mode-label::before {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 21px;
+    height: 21px;
+    background-color: white;
+    border-radius: 50%;
+    transition: transform 0.5s;
+}
+
+#darkMode:checked + .dark-mode-label {
+    background-color: #555;
+}
+
+#darkMode:checked + .dark-mode-label::before {
+    transform: translateX(25px);
 }
 
 /* Estilos da barra de navegação */
@@ -172,10 +282,9 @@ ul {
 }
 
 .card {
-    background-color: #fff;
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     transition: transform 0.2s;
 }
 
@@ -223,7 +332,6 @@ ul {
     color: white;
     background-color: #E0270D;
     text-align: center;
-    border-bottom: 1px solid #ddd;
 }
 
 .ingredients {
@@ -572,6 +680,9 @@ footer strong {
 /* Responsividade para mobile (testes feitos com Galaxy Note 20) */
 
 @media(max-width: 700px) {
+    .dark-mode-label {
+        bottom: 3%;
+    }
     .nav-toggler {
         display: flex;
     }
@@ -607,6 +718,10 @@ footer strong {
     .header #nav-check:checked ~ .nav-toggler span::after{
         top: 0;
         transform: rotate(-45deg);
+    }
+
+    #darkMode:checked ~ .dark-body-bg nav{
+        background-color: rgb(40, 42, 54);
     }
     .img-title {
         display: none;
