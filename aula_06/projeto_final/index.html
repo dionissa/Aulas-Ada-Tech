@@ -18,6 +18,7 @@
     <!-- Input e label pra criar o botão de dark mode-->
     <input type="checkbox" id="darkMode" class="dark-mode-toggle">
     <label for="darkMode" class="dark-mode-label"></label>
+    
     <div class="dark-body-bg">
     <!-- Navbar fixa no topo da página com links de navegação-->
     <nav class="header">
@@ -25,6 +26,10 @@
             <div class="row">
                 <div class="logo">
                     <a href="#home" class="active"><img class="img-logo" src="img/ifood-logo.png" alt="iFood"></a>
+                    <ul>
+                        <li><a class="criar-conta" href="">criar conta</a></li>
+                        <li><a class="conectar-conta" href="">Entrar</a></li>
+                    </ul>
                 </div>
                 <input type="checkbox" id="nav-check">
                 <label for="nav-check" class="nav-toggler">
@@ -60,18 +65,28 @@
         <img src="img/burguer.png" alt="Hambúrguer Chamativo">
         </div>
         <div class="text-main">
-        <img src="img/carinha.png" alt="carinha ifood">
+        <img class="carinha" src="img/carinha.png" alt="carinha ifood">
         <h1 class="h1-main">A marca que você já conhece, redefinida. ;)</h1>
         <p class="p-main">Bem-vindo ao novo iFood, onde tradição e inovação se encontram à mesa. Descubra uma plataforma renovada, mais intuitiva e rica em funcionalidades, tornando cada experiência culinária ainda mais personalizada e emocionante. Aqui, não alimentamos apenas estômagos, mas também corações, culturas e comunidades. Junte-se a nós nesta jornada saborosa e explore os inúmeros benefícios, desde restaurantes locais autênticos até cursos de culinária ao vivo, tudo ao alcance dos seus dedos. iFood: Mais que uma entrega, uma experiência.</p>
         </div>
     </div>
     <!-- Cardápio com as opções de compras por cards. 4  por linha no desktop e 1 por linha no mobile.-->
+    <input type="radio" name="filter" id="show-class1" hidden>
+    <input type="radio" name="filter" id="show-class2" hidden>
+    <input type="radio" name="filter" id="show-none" hidden>
     <main class="main-catalog">
+
     <div class="text-catalog" id="catalog">
-        <h2>Nosso cardápio:</h2>
+        <h2>Nosso catálogo:</h2>
     </div>
+    <div class="seletor-tipos">
+        <ul>
+            <label for="show-class1"><li class="class-toggle1">doces</li></label>
+            <label for="show-class2"><li class="class-toggle2">salgados</li></label>
+            <label for="show-none"><li class="class-toggle">mostrar todos</li></label>
+        </ul>
     <section class="catalog">
-        <div class="card">
+        <div class="card class1">
             <figure>
                 <img src="img/acai.png" alt="Descrição do Item 1">
                 <figcaption>Açaí com Morango</figcaption>
@@ -82,7 +97,7 @@
                 <li>• Morangos</li>
             </ul>
         </div>
-        <div class="card">
+        <div class="card class2">
             <figure>
                 <img src="img/feijao.png" alt="Descrição do Item 1">
                 <figcaption>Feijoada</figcaption>
@@ -90,75 +105,76 @@
             <span class="price">R$ 29,99</span>
             <ul class="ingredients">
                 <li>• Feijão preto</li>
-                <li>• carne suína, arroz branco.</li>
+                <li>• Carne suína, arroz branco.</li>
             </ul>
         </div>
-        <div class="card">
+        <div class="card class1">
             <figure>
-                <img src="img/risoto.png" alt="Descrição do Item 1">
-                <figcaption>Risoto</figcaption>
+                <img src="img/brigadeiro.png" alt="Descrição do Item 1">
+                <figcaption>Brigadeiros</figcaption>
             </figure>
-            <span class="price">R$ 19,99</span>
+            <span class="price">R$ 10,99</span>
             <ul class="ingredients">
-                <li>• Arroz arbóreo, frango</li>
-                <li>• Caldo de galinha</li>
+                <li>• Leite Condensado</li>
+                <li>• Chocolate em pó</li>
             </ul>
         </div>
-        <div class="card">
+        <div class="card class2">
             <figure>
                 <img src="img/carbonara.png" alt="Descrição do Item 1">
                 <figcaption>Carbonara</figcaption>
             </figure>
-            <span class="price">R$ 19,99</span>
+            <span class="price">R$ 22,99</span>
             <ul class="ingredients">
                 <li>• Espaguete, bacon</li>
                 <li>• Queijo parmesão</li>
             </ul>
         </div>
-        <div class="card">
+        <div class="card class2">
             <figure>
                 <img src="img/pizza.png" alt="Descrição do Item 1">
                 <figcaption>Pizza</figcaption>
             </figure>
-            <span class="price">R$ 19,99</span>
+            <span class="price">R$ 35,99</span>
             <ul class="ingredients">
                 <li>• Massa de pizza</li>
                 <li>• Molho de tomate, queijo mozzarella</li>
             </ul>
         </div>
-        <div class="card">
+        <div class="card class1">
             <figure>
-                <img src="img/taco.png" alt="Descrição do Item 1">
-                <figcaption>Tacos</figcaption>
+                <img src="img/cheesecake.png" alt="Descrição do Item 1">
+                <figcaption>Cheesecake</figcaption>
             </figure>
-            <span class="price">R$ 19,99</span>
+            <span class="price">R$ 15,99</span>
             <ul class="ingredients">
-                <li>• Tortilha de milho</li>
-                <li>• Carne moída, alface</li>
+                <li>• Bolo de Morango</li>
+                <li>• Cream cheese</li>
             </ul>
         </div>
-        <div class="card">
+        <div class="card class2">
             <figure>
                 <img src="img/burg.png" alt="Descrição do Item 1">
                 <figcaption>Hambúrguer</figcaption>
             </figure>
-            <span class="price">R$ 19,99</span>
+            <span class="price">R$ 24,59</span>
             <ul class="ingredients">
                 <li>• Hambúrguer Artesanal 200g</li>
                 <li>• Pão brioche, salada</li>
             </ul>
         </div>
-        <div class="card">
+        <div class="card class1">
             <figure>
-                <img src="img/sushi.png" alt="Descrição do Item 1">
-                <figcaption>Sushi</figcaption>
+                <img src="img/cupcake.png" alt="Descrição do Item 1">
+                <figcaption>Cupcake</figcaption>
             </figure>
-            <span class="price">R$ 19,99</span>
+            <span class="price">R$ 12,49</span>
             <ul class="ingredients">
-                <li>• Arroz para sushi</li>
-                <li>• Peixe fresco, alga nori</li>
+                <li>• Bolinhos variados</li>
+                <li>• Chocolate, creme, morango</li>
             </ul>
         </div>
+    </div>
     </section>
     </main>
     <!-- Localizador de comércios próximos ao seu endereço para delivery-->

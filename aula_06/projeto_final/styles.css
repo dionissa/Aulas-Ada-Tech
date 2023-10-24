@@ -56,6 +56,12 @@ html {
     color: #666666;
 }
 
+#darkMode:checked ~ .dark-body-bg ul li.class-toggle1, #darkMode:checked ~ .dark-body-bg ul li.class-toggle2, #darkMode:checked ~ .dark-body-bg ul li.class-toggle {
+    color: #ffffff;
+}
+
+
+
 #darkMode:checked ~ .dark-body-bg div.contact-box{
     background-color: rgb(40, 42, 54);
 }
@@ -89,7 +95,12 @@ html {
     background-color: rgb(68, 71, 90); 
 }
 
-
+.carinha {
+    transition: 1s ease-in-out;
+}
+.carinha:hover{
+    rotate: 2turn;
+  }
 .material-symbols-outlined {
   font-variation-settings:
   'FILL' 0,
@@ -174,6 +185,40 @@ ul {
     padding: 0 15px;
 }
 
+.logo {
+    display: flex;
+}
+
+.logo ul {
+    display: flex;
+    margin-left: 30px;
+    align-items: center;
+}
+
+.logo ul li {
+    padding: 0 20px;
+}
+
+.logo a {
+   text-decoration: none;
+}
+
+.logo ul li a.criar-conta {
+    color: #D9232A;
+}
+
+.logo ul li a.conectar-conta {
+    background-color: #D9232A;
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.logo ul li a.conectar-conta:hover {
+    background-color: #D9232A;
+    opacity: 0.8;
+}
+
 .nav ul li {
     display: inline-block;
     margin-left: 40px;
@@ -212,7 +257,7 @@ ul {
     display: none;
     align-items: center;
     justify-content: center;
-    margin-right: 15px;
+    margin: 20px auto;
 }
 
 .nav-toggler span {
@@ -287,6 +332,10 @@ ul {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     transition: transform 0.2s;
 }
+.card ul{
+    display: flex;
+    flex-direction: column;
+}
 
 .card:hover {
     transform: scale(1.05);
@@ -312,6 +361,51 @@ ul {
   .img-title {
     animation: wave 2s infinite;
   }
+
+.seletor-tipos ul {
+    display: flex;
+    justify-content: center;
+}
+
+.seletor-tipos ul li a {
+    text-decoration: none;
+    color: #717171;
+}
+
+#show-class1:checked ~ main section div.class2 {
+    display: none;
+}
+
+#show-class2:checked ~ main section div.class1 {
+    display: none;
+}
+
+#show-class1:checked ~ main div ul li.class-toggle1 {
+    border-color: rgb(83, 83, 255);
+    transition: 0.3s ease;
+}
+
+#show-class2:checked ~ main div ul li.class-toggle2 {
+    border-color: rgb(83, 83, 255);
+    transition: 0.3s ease;
+}
+
+ul li.class-toggle, li.class-toggle1, ul li.class-toggle2 {
+    color: #717171;
+    font-weight: 300;
+    font-size: .875rem;
+    border: 1px solid #f2f2f2;
+    padding: 8px 12px;
+    margin: 4px;
+    border-radius: 100px;
+    line-height: 16px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+#show-none:checked ~ .class-toggle {
+    border-color: transparent;
+}
 
 .card figure figcaption {
     position: absolute;
