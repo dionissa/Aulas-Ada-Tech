@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iFood</title>
+    <meta name="description" content="Conheça a nova versão do iFood: reinventando a marca que já conquistou paladares por todo o Brasil. Mais moderno, intuitivo e voltado para uma experiência gastronômica sem precedentes.">
+    <link rel="canonical" href="/" />
+    <meta name="author" content="Rodrigo Dionissa">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="img/ifood-logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">   
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+</head>
+<body>
+     <!-- Input e label pra criar o botão de dark mode-->
+     <input type="checkbox" id="darkMode" class="dark-mode-toggle">
+     <label for="darkMode" class="dark-mode-label"></label>
+     
+     <div class="dark-body-bg">
+     <!-- Navbar fixa no topo da página com links de navegação-->
+     <nav class="header">
+         <div class="container">
+             <div class="row">
+                 <div class="logo">
+                     <a href="index.html" class="active"><img class="img-logo" src="img/ifood-logo.png" alt="iFood"></a>
+                     <ul>
+                         <li><a class="criar-conta" href="">criar conta</a></li>
+                         <li><a class="conectar-conta" href="">Entrar</a></li>
+                     </ul>
+                 </div>
+                 <input type="checkbox" id="nav-check">
+                 <label for="nav-check" class="nav-toggler">
+                     <span></span>
+                 </label>
+             <nav class="nav">
+                 <ul>
+                     <li><a href="index.html" class="active"><span class="material-symbols-outlined">
+                         home</span>&nbsp;Início</a></li>
+                 </ul>
+             </nav>
+         </div>
+         </div>
+     </nav>
+     <main>
+        <div class="login-form">
+            <div class="left-login">
+                <div class="text-catalog">
+                <h2>Entre na sua conta</h2>
+            </div>
+                <form action="http://localhost:3000/forms" method="post">
+                    <div class="user-pass">
+                    <label for="username">Usuário</label>
+                    <input type="text" name="username" id="username">
+                    <label for="password">Senha</label>
+                    <input type="password" name="password" id="password">
+                </div>
+                    <button class="login" type="submit">Entrar</button>
+                </form>
+                <a class="account" href="">Esqueci minha senha</a>
+                <a class="account" href="">Criar conta</a>
+            </div>
+            <div class="right-login">
+                <img class="img-login" src="img/login.svg" alt="login">
+            </div>
+        </div>
+     </main>
+     <footer>
+        <div class="footer-content">
+           <p>&copy; 2023. Criado por Dionissa. Estudo para o curso <strong>Vem Ser Tech</strong> da Ada.</p>
+           <p><i class="fa fa-envelope"></i> dionissarodrigo@gmail.com; <i class="fa fa-phone"></i> +55 47999873-888</p>
+           
+        </div>
+    </footer>
+</body>

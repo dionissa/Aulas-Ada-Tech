@@ -48,6 +48,16 @@ html {
     background-color: rgb(40, 42, 54);
 }
 
+#darkMode:checked ~ .dark-body-bg figcaption{
+    background-color: rgb(68, 71, 90);
+    color: white;
+}
+
+#darkMode:checked ~ .dark-body-bg span{
+    background-color: rgb(68, 71, 90);
+    color: white;
+}
+
 #darkMode:checked ~ .dark-body-bg div.card{
     background-color: rgb(68, 71, 90);
 }
@@ -73,8 +83,6 @@ html {
 #darkMode:checked ~ .dark-body-bg h1::selection{
     background-color: rgb(255, 255, 255);
 }
-
-
  
 /* Estilos para a alternância de modo noturno*/
 .dark-mode-toggle {
@@ -196,7 +204,7 @@ ul {
 }
 
 .logo ul li {
-    padding: 0 20px;
+    padding: 0 8px;
 }
 
 .logo a {
@@ -210,7 +218,7 @@ ul {
 .logo ul li a.conectar-conta {
     background-color: #D9232A;
     color: white;
-    padding: 15px;
+    padding: 8px;
     border-radius: 8px;
 }
 
@@ -221,13 +229,13 @@ ul {
 
 .nav ul li {
     display: inline-block;
-    margin-left: 40px;
+    margin-left: 15px;
 }
 
 .nav ul li a {
     display: flex;
     font-size: 16px;
-    padding: 15px 15px;
+    padding: 8px 8px;
     color: rgba(0,0,0,0.7);
     text-transform: capitalize;
     text-align: center;
@@ -238,7 +246,7 @@ ul {
 .nav ul li a:active, .nav ul li a:hover {
     color: #fff;
     background-color: #D9232A;
-    padding: 15px 15px;
+    padding: 8px 8px;
     border-radius: 8px;
 }
 
@@ -337,6 +345,20 @@ ul {
     flex-direction: column;
 }
 
+button.comprar {
+    background-color: #ea1d2c;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin: 0;
+    font-size: 1.5rem;
+    border-radius: 0;
+    font-weight: bold;
+    display: block;
+    width: 100%;
+    cursor: pointer;
+}
+
 .card:hover {
     transform: scale(1.05);
 }
@@ -411,27 +433,33 @@ ul li.class-toggle, li.class-toggle1, ul li.class-toggle2 {
     position: absolute;
     bottom: 0;
     left: 0;
-    background-color: rgba(0, 0, 0, 0.9);
-    color: #fff;
+    background-color: #fff;
+    color: #000;
     padding: 5px 10px;
+    font-weight: bold;
     width: 100%;
-    text-align: center;
+    text-align: left;
     margin: auto 0;
 }
 
 .price {
     display: block;
-    font-weight: bold;
+    font-weight: normal;
     padding: 10px;
-    color: white;
-    background-color: #E0270D;
-    text-align: center;
+    color: #50a773;
+    background-color: #fff;
+    text-align: left;
+}
+
+p.min-price {
+    padding: 0;
 }
 
 .ingredients {
     list-style-type: none;
     margin: 0;
-    padding: 10px;
+    text-align: left;
+    padding: 8px;
 }
 
 .ingredients li {
@@ -521,7 +549,6 @@ ul li.class-toggle, li.class-toggle1, ul li.class-toggle2 {
 
 .input-container button:active {
     background-color: #E0270D;
-    border: 1px solid #ccc;
 }
 
 .delivery img {
@@ -552,7 +579,7 @@ ul li.class-toggle, li.class-toggle1, ul li.class-toggle2 {
     justify-content: center;
 }
 
-.delivery-form h2, p {
+.delivery-form > h2,.delivery-form > p {
     margin: 30px;
 }
 
@@ -598,6 +625,7 @@ ul li.class-toggle, li.class-toggle1, ul li.class-toggle2 {
     width: 50vw;
     background-color: #fff;
     border-radius: 10px;
+    padding: 8px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
@@ -771,9 +799,88 @@ footer strong {
   color: rgb(9, 170, 9);
 }
 
+.login-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left-login form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #ea1d2c;
+
+}
+
+.left-login form label {
+    padding: 8px;
+}
+
+.left-login form input {
+    border: 1px solid #ccc;
+    background-color: white;
+    border-radius: 8px;
+    padding: 8px;
+}
+
+.login {
+    background-color: #ea1d2c;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin: 15px;
+    font-size: 1.5rem;
+    border-radius: 8px;
+    font-weight: bold;
+    display: block;
+    width: 100%;
+    cursor: pointer;
+    transition: .5s all ease;
+}
+
+.login:hover {
+    opacity: 0.9;
+    transition: .5s all ease;
+}
+
+.account {
+    margin: 15px;
+    text-decoration: none;
+    color: #9b9b9b
+}
+
+.account:hover {
+    color: #ea1d2c;
+}
+
+.img-login {
+    width: 550px;
+}
+
+
 /* Responsividade para mobile (testes feitos com Galaxy Note 20) */
 
 @media(max-width: 700px) {
+    .img-login {
+        display: none;
+    }
+
+    .login-form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 690px;
+    }
+
+    .user-pass {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
     .dark-mode-label {
         bottom: 3%;
     }
